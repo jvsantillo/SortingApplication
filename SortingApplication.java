@@ -63,7 +63,7 @@ public class SortingApplication {
         if (numberOfRecordsGenerated != 0) {
             System.out.println("Loading the stored record from  <" + "Table.csv" + "> to the table.");
             numberOfRecordsLoaded     = (int) applicationTable.loadFromCSV(applicationPath + "Table.csv", 0, (numberOfRecordsGenerated - 1));
-            /*if (numberOfRecordsLoaded == numberOfRecordsGenerated) {
+            if (numberOfRecordsLoaded == numberOfRecordsGenerated) {
                System.out.println("Printing records from the table.");      
                numberOfRecordsPrinted      = applicationTable.print(0, (numberOfRecordsGenerated - 1));
                if (numberOfRecordsPrinted == numberOfRecordsLoaded) {
@@ -79,14 +79,14 @@ public class SortingApplication {
             else {
                  System.out.println("Unfortunately there are records that have not been uploaded to the table (from .csv file).");
                  System.out.println("Please check the parameters entered for the loading process.");
-            }*/
+            }
         }
         else {
             System.out.println("Unfortunately no record can be generated.");
             System.out.println("Please check the parameters entered for the generation process.");
         }
         selectionSort(applicationTable, 4);
-        //applicationTable.print(0, 4);
+        applicationTable.print(0, 4);
         String isSorted = applicationTable.isSorted() ? "YES" : "NO";
         System.out.println(isSorted);
         
